@@ -19,10 +19,10 @@ fn index() -> &'static str {
 
 #[launch]
 async fn rocket() -> Rocket<Build> {
-    bar().await
+    bar____EXTRACT_THIS().await
 }
 
-async fn bar() -> Rocket<Build> {
+async fn bar____EXTRACT_THIS() -> Rocket<Build> {
     env_logger::init();
     info!("starting Beerus Rest API...");
     // Create config.
