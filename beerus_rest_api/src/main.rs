@@ -19,6 +19,7 @@ fn index() -> &'static str {
 
 #[launch]
 async fn rocket() -> Rocket<Build> {
+    // START SELECTION //
     env_logger::init();
     info!("starting Beerus Rest API...");
     // Create config.
@@ -49,6 +50,7 @@ async fn rocket() -> Rocket<Build> {
             starknet::endpoints::query_starknet_state_root
         ],
     )
+    // END SELECTION //
 }
 
 #[cfg(test)]
